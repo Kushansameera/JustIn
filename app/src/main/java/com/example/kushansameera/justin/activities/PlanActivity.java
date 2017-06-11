@@ -1,4 +1,4 @@
-package com.example.kushansameera.justin;
+package com.example.kushansameera.justin.activities;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -11,7 +11,8 @@ import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
+
+import com.example.kushansameera.justin.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

@@ -7,46 +7,46 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.kushansameera.justin.TripActivity">
+    tools:context=".activities.TripActivity">
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/main_layout">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="vertical"
+            android:id="@+id/map_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/map_layout"
-            android:layout_weight="0.5">
+            android:layout_weight="0.5"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <fragment
                     android:id="@+id/map"
                     android:name="com.google.android.gms.maps.MapFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
             </RelativeLayout>
-
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
+            android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/tab_layout"
-            android:layout_weight="0.5">
+            android:layout_weight="0.5"
+            android:orientation="vertical">
 
             <TabHost
+                android:id="@+id/tabHost"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/tabHost">
+                android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,10 +68,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
-                            <android.support.v7.widget.AppCompatTextView
+
+                            <ScrollView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Tab1"/>
+                                android:id="@+id/scrollView" >
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rcvEvents"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </ScrollView>
                         </LinearLayout>
 
                         <LinearLayout
@@ -79,10 +86,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
+
                             <android.support.v7.widget.AppCompatTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Tab2"/>
+                                android:text="Tab2" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -90,10 +98,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
+
                             <android.support.v7.widget.AppCompatTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Tab3"/>
+                                android:text="Tab3" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -101,10 +110,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
+
                             <android.support.v7.widget.AppCompatTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Tab4"/>
+                                android:text="Tab4" />
                         </LinearLayout>
                     </FrameLayout>
                 </LinearLayout>
